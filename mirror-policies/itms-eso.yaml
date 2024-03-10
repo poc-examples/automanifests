@@ -1,0 +1,10 @@
+apiVersion: config.openshift.io/v1 
+kind: ImageTagMirrorSet 
+metadata:
+  name: external-secrets
+spec:
+  imageTagMirrors: 
+  - mirrors:
+    - esotest.azurecr.io/external-secrets
+    source: ghcr.io/external-secrets/external-secrets
+    mirrorSourcePolicy: NeverContactSource
